@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Literata:wght@400;500;600&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="scripts.js" defer></script>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+    <main class="flex min-h-screen">
+        <button id="mobile-menu-button" aria-label="Open menu" aria-expanded="false"
+            class="fixed top-4 right-4 z-50 inline-flex items-center justify-center rounded-xl border border-outline-variant/20 bg-surface px-3 py-3 text-on-surface shadow-sm lg:hidden">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+        <div id="mobile-menu" class="fixed inset-0 z-50 hidden bg-surface/95 backdrop-blur-md p-6 lg:hidden">
+            <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-sm">
+                    <img src="images/profile.jpg" alt="Alex Rivera"
+                        class="h-12 w-12 rounded-full object-cover ring-2 ring-primary/20" />
+                    <div>
+                        <div class="font-headline-md text-headline-md text-primary font-bold">Alex Rivera</div>
+                        <div class="text-on-surface-variant font-label-md text-label-md">Fullstack Architect</div>
+                    </div>
+                </div>
+                <button id="mobile-menu-close" aria-label="Close menu"
+                    class="inline-flex items-center justify-center rounded-xl border border-outline-variant/20 bg-surface px-3 py-3 text-on-surface shadow-sm">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <nav class="space-y-3">
+                <a href="index.html"
+                    class="block rounded-xl border border-outline-variant/20 bg-secondary-container px-4 py-3 text-on-secondary-container font-label-md text-label-md">Overview</a>
+                <a href="portfolio.html"
+                    class="block rounded-xl border border-outline-variant/20 px-4 py-3 text-on-surface-variant font-label-md text-label-md">Projects</a>
+                <a href="blog.html"
+                    class="block rounded-xl border border-outline-variant/20 px-4 py-3 text-on-surface-variant font-label-md text-label-md">Blog</a>
+                <a href="typography.html"
+                    class="block rounded-xl border border-outline-variant/20 px-4 py-3 text-on-surface-variant font-label-md text-label-md">Typography</a>
+                <a href="contact.html"
+                    class="block rounded-xl border border-outline-variant/20 px-4 py-3 text-on-surface-variant font-label-md text-label-md">Contact</a>
+            </nav>
+            <div class="mt-6">
+                <a href="contact.html"
+                    class="inline-flex w-full items-center justify-center rounded-full bg-primary px-4 py-3 text-white font-bold shadow-sm hover:bg-primary-container">Hire
+                    Me</a>
+            </div>
+        </div>
+        <!-- SideNavBar -->
+        <aside
+            class="hidden lg:flex flex-col py-md gap-base h-screen w-64 rounded-r-xl bg-surface-container-low border-r border-outline-variant/20 sticky top-0">
+            <div class="px-md mb-lg flex flex-col items-center text-center">
+                <img src="images/profile.jpg" alt="Alex Rivera"
+                    class="h-24 w-24 rounded-full object-cover mb-4 ring-2 ring-primary/20" />
+                <div class="font-headline-md text-headline-md text-primary font-bold mb-xs">Alex Rivera</div>
+                <div class="text-on-surface-variant font-label-md text-label-md">Fullstack Architect</div>
+            </div>
+            <div class="flex flex-col gap-xs flex-grow">
+                <a class="bg-secondary-container text-on-secondary-container rounded-full mx-2 px-4 py-2 flex items-center gap-sm scale-95 active:scale-100 transition-transform"
+                    href="index.html">
+                    <span class="material-symbols-outlined" data-icon="person">person</span>
+                    <span class="font-label-md text-label-md">Overview</span>
+                </a>
+                <a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-full mx-2 px-4 py-2 flex items-center gap-sm scale-95 active:scale-100 transition-transform"
+                    href="portfolio.html">
+                    <span class="material-symbols-outlined" data-icon="code">code</span>
+                    <span class="font-label-md text-label-md">Projects</span>
+                    <span
+                        class="ml-2 inline-flex items-center bg-primary text-white text-xs px-2 py-0.5 rounded-full">PRO</span>
+                </a>
+                <a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-full mx-2 px-4 py-2 flex items-center gap-sm scale-95 active:scale-100 transition-transform"
+                    href="blog.html">
+                    <span class="material-symbols-outlined" data-icon="description">description</span>
+                    <span class="font-label-md text-label-md">Blog</span>
+                    <span
+                        class="ml-2 inline-flex items-center bg-primary text-white text-xs px-2 py-0.5 rounded-full">PRO</span>
+                </a>
+                <a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-full mx-2 px-4 py-2 flex items-center gap-sm scale-95 active:scale-100 transition-transform"
+                    href="typography.html">
+                    <span class="material-symbols-outlined" data-icon="text_fields">text_fields</span>
+                    <span class="font-label-md text-label-md">Typography</span>
+                    <span
+                        class="ml-2 inline-flex items-center bg-primary text-white text-xs px-2 py-0.5 rounded-full">PRO</span>
+                </a>
+                <a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-full mx-2 px-4 py-2 flex items-center gap-sm scale-95 active:scale-100 transition-transform"
+                    href="contact.html">
+                    <span class="material-symbols-outlined" data-icon="mail">mail</span>
+                    <span class="font-label-md text-label-md">Contact</span>
+                    <span
+                        class="ml-2 inline-flex items-center bg-primary text-white text-xs px-2 py-0.5 rounded-full">PRO</span>
+                </a>
+            </div>
+            <div class="px-md mt-auto">
+                <button
+                    class="w-full py-base bg-secondary text-on-secondary rounded-full font-label-md text-label-md hover:opacity-90 transition-opacity">
+                    Hire Me
+                </button>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <div class="flex-grow w-full">
+            <!-- Hero Section (Asymmetric) -->
+            <section class="asymmetric-hero py-xl bg-surface-bright relative overflow-hidden">
+                <div
+                    class="absolute top-[-100px] right-[-100px] w-96 h-96 bg-primary-fixed opacity-20 flux-shape blur-3xl">
+                </div>
+                <div class="max-w-container-max mx-auto grid lg:grid-cols-2 items-center gap-lg">
+                    <div class="z-10">
+                        <h1 class="font-display-lg text-display-lg text-on-background mb-md leading-tight">
+                            Architecting <span class="text-primary italic">Fluid</span> Digital Experiences.
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-lg">
+                            I build robust full-stack applications where engineering precision meets organic,
+                            human-centric design. Focused on "Visual Quietude" and sustainable code architecture.
+                        </p>
+                        <div class="flex gap-md">
+                            <button
+                                class="px-lg py-base bg-primary text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-xs">
+                                <a class="inline-flex items-center gap-xs" href="portfolio.html">Explore Work
+                                    <span class="material-symbols-outlined"
+                                        data-icon="arrow_forward">arrow_forward</span></a>
+                            </button>
+                            <button
+                                class="px-lg py-base border-[1.5px] border-outline text-on-surface rounded-lg font-label-md text-label-md">
+                                <a class="inline-block w-full h-full" href="contact.html">Read Biography</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="flux-shape w-full aspect-square bg-surface-container overflow-hidden p-md">
+                            <img alt="Code Abstract" class="w-full h-full object-cover flux-shape"
+                                data-alt="A macro shot of a sleek computer monitor displaying clean, colorful code. The lighting is soft and golden, mimicking a solarized theme with warm amber and deep teal tones. Organic, soft-edged glass shapes overlap the screen, creating a tactile and serene atmosphere of deep focus and intellectual creativity."
+                                src="images/banner.jpg" />
+                        </div>
+                        <div
+                            class="absolute -bottom-base -left-base bg-white/80 backdrop-blur-md p-md rounded-xl shadow-sm border border-outline-variant/20 max-w-[200px]">
+                            <div class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-xs">
+                                Status</div>
+                            <div class="font-body-md text-body-md text-on-surface">Available for strategic partnerships
+                                in 2024.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Bento Grid Section (Portfolio) -->
+            <section class="px-md py-xl max-w-container-max mx-auto" id="portfolio">
+                <div class="flex items-end justify-between mb-lg">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-on-background">Featured Works</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">A selection of projects focused on
+                            clarity and performance.</p>
+                    </div>
+                    <a class="text-primary font-bold font-label-md text-label-md flex items-center gap-xs" href="#">
+                        View All Projects <span class="material-symbols-outlined"
+                            data-icon="open_in_new">open_in_new</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-md auto-rows-[280px]">
+                    <!-- Bento Item 1: Large -->
+                    <div
+                        class="md:col-span-8 md:row-span-2 bg-surface-container-low rounded-xl overflow-hidden group flex flex-col border border-outline-variant/10">
+                        <div class="h-2/3 overflow-hidden">
+                            <img alt="Dashboard UI"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A sophisticated web dashboard design featuring soft curves and a solarized color palette of cream, gold, and muted blue. The UI is clean and high-contrast but visually quiet, emphasizing negative space and elegant data visualizations. High-key light mode aesthetic with soft ambient occlusion shadows."
+                                src="images/portfolio-01.jpg" />
+                        </div>
+                        <div class="p-md flex-grow flex flex-col justify-center">
+                            <span class="font-label-sm text-label-sm text-tertiary mb-xs uppercase">SaaS Platform</span>
+                            <h3 class="font-headline-md text-headline-md text-on-background">Lumina Analytics</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">Real-time data
+                                engine for organic marketing growth.</p>
+                        </div>
+                    </div>
+                    <!-- Bento Item 2: Medium -->
+                    <div
+                        class="md:col-span-4 md:row-span-1 bg-secondary-container/20 rounded-xl p-md border border-outline-variant/10 flex flex-col justify-between">
+                        <div class="flex justify-between items-start">
+                            <span class="material-symbols-outlined text-secondary text-4xl"
+                                data-icon="cloud_done">cloud_done</span>
+                            <span
+                                class="px-sm py-xs bg-secondary-container text-on-secondary-container rounded-full font-label-sm text-label-sm">Active</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md text-on-background mb-xs">FluxDB</h3>
+                            <p class="font-label-md text-label-md text-on-surface-variant">Distributed graph database
+                                for neural-pathway applications.</p>
+                        </div>
+                    </div>
+                    <!-- Bento Item 3: Tall -->
+                    <div
+                        class="md:col-span-4 md:row-span-2 bg-surface-container-highest/40 rounded-xl overflow-hidden border border-outline-variant/10 flex flex-col">
+                        <div class="p-md">
+                            <h3 class="font-headline-md text-headline-md text-on-background mb-xs">Visual Quietude</h3>
+                            <p class="font-label-md text-label-md text-on-surface-variant">Open-source CSS framework for
+                                eye-strain reduction.</p>
+                        </div>
+                        <div class="flex-grow mt-auto">
+                            <img alt="Tech Setup" class="w-full h-full object-cover"
+                                data-alt="A minimalist tech setup on a light wood desk. The workspace features a mechanical keyboard, a small succulent, and a single high-resolution monitor. The scene is bathed in morning sunlight, creating long, soft shadows and a peaceful atmosphere of professional focus. Palette is strictly warm neutrals and soft tech textures."
+                                src="images/portfolio-02.jpg" />
+                        </div>
+                    </div>
+                    <!-- Bento Item 4: Small -->
+                    <div
+                        class="md:col-span-4 md:row-span-1 bg-primary-fixed/20 rounded-xl p-md border border-outline-variant/10 flex items-center gap-md">
+                        <div class="w-16 h-16 bg-primary flex items-center justify-center rounded-lg text-on-primary">
+                            <span class="material-symbols-outlined text-3xl" data-icon="api">api</span>
+                        </div>
+                        <div>
+                            <h3 class="font-label-md text-label-md font-bold text-on-background">Eco-API</h3>
+                            <p class="font-label-sm text-label-sm text-on-surface-variant">Low-carbon computing library.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Bento Item 5: Wide -->
+                    <div
+                        class="md:col-span-4 md:row-span-1 bg-tertiary-fixed/20 rounded-xl p-md border border-outline-variant/10 flex flex-col justify-end">
+                        <span class="material-symbols-outlined text-tertiary mb-base" data-icon="brush">brush</span>
+                        <h3 class="font-label-md text-label-md font-bold text-on-background">Solarized UI Kit</h3>
+                        <div class="w-full h-2 bg-outline-variant/20 rounded-full mt-base overflow-hidden">
+                            <div class="w-4/5 h-full bg-tertiary rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Skills / Tech Stack -->
+            <section class="bg-surface-container-low py-xl" id="skills">
+                <div class="max-w-container-max mx-auto px-md text-center">
+                    <h2 class="font-headline-lg text-headline-lg text-on-background mb-lg">Technical Flux</h2>
+                    <div class="flex flex-wrap justify-center gap-md">
+                        <div
+                            class="bg-surface p-md rounded-xl border border-outline-variant/10 w-40 flex flex-col items-center shadow-sm">
+                            <span class="material-symbols-outlined text-primary text-4xl mb-base"
+                                data-icon="terminal">terminal</span>
+                            <span class="font-label-md text-label-md text-on-surface">TypeScript</span>
+                        </div>
+                        <div
+                            class="bg-surface p-md rounded-xl border border-outline-variant/10 w-40 flex flex-col items-center shadow-sm">
+                            <span class="material-symbols-outlined text-primary text-4xl mb-base"
+                                data-icon="hub">hub</span>
+                            <span class="font-label-md text-label-md text-on-surface">React/Next.js</span>
+                        </div>
+                        <div
+                            class="bg-surface p-md rounded-xl border border-outline-variant/10 w-40 flex flex-col items-center shadow-sm">
+                            <span class="material-symbols-outlined text-primary text-4xl mb-base"
+                                data-icon="storage">storage</span>
+                            <span class="font-label-md text-label-md text-on-surface">PostgreSQL</span>
+                        </div>
+                        <div
+                            class="bg-surface p-md rounded-xl border border-outline-variant/10 w-40 flex flex-col items-center shadow-sm">
+                            <span class="material-symbols-outlined text-primary text-4xl mb-base"
+                                data-icon="cloud">cloud</span>
+                            <span class="font-label-md text-label-md text-on-surface">AWS Architecture</span>
+                        </div>
+                        <div
+                            class="bg-surface p-md rounded-xl border border-outline-variant/10 w-40 flex flex-col items-center shadow-sm">
+                            <span class="material-symbols-outlined text-primary text-4xl mb-base"
+                                data-icon="architecture">architecture</span>
+                            <span class="font-label-md text-label-md text-on-surface">System Design</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Footer -->
+            <footer class="w-full py-lg bg-surface-container-lowest border-t border-outline-variant/10">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center px-md max-w-container-max mx-auto gap-md">
+                    <div class="flex flex-col items-center md:items-start">
+                        <div class="font-headline-sm text-headline-sm text-primary mb-xs">DevFlow CV</div>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 Alex Rivera. HTML Template
+                            by <a href="https://templatesjungle.com"
+                                class="text-primary hover:underline">templatesjungle.com</a></p>
+                    </div>
+                    <div class="flex gap-lg">
+                        <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm"
+                            href="#">GitHub</a>
+                        <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm"
+                            href="#">LinkedIn</a>
+                        <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm"
+                            href="#">Twitter</a>
+                        <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm"
+                            href="#">RSS</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+</body>
+
+</html>
